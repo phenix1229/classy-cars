@@ -14,8 +14,8 @@ class Vehicle {
 }
 
 class Car extends Vehicle{
-  constructor(name){
-    super(name, 4)
+  constructor(name, maxSpeed){
+    super(name, 4, maxSpeed)
   }
 
   drive() {
@@ -29,6 +29,10 @@ class Ferrari extends Car{
     super()
     this.name = 'Ferrari';
     this.maxSpeed = 180;
+  }
+
+  drive(){
+    return `${super.drive()}I'm a Ferrari!`
   }
 
   accelerate(){
